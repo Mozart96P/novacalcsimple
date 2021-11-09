@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Calculadora Simples</title>
+                <link rel="stylesheet" href="style.css">
+</head>
+<body>
+                <div id="calculadora">
+                                <h1>Calculadora</h1>
+                                <label for="">Valor 1</label> <br>
+                                <input id="valor1" type="number"> <br>
+                                <label for="">Valor 2</label> <br>
+                                <input id="valor2" type="number"> <br>
+                                <div id="botoes">
+                                                <button  onclick="soma()">+</button>
+                                                <button  onclick="subtracao()">-</button>
+                                                <button  onclick="multiplicacao()">*</button>
+                                                <button  onclick="divisao()">/</button>
+                                                <button id="reset"  onclick="location.reload()">C</button>
+                                </div>
+                                <div id="resultado"></div>      
+                </div>    
+                <!--Funcionalidade em JS-->
+                <script>
+                                
+                                
+                                function soma(){
+                                                var valor1 = parseFloat(document.getElementById("valor1").value);
+                                                var valor2 = parseFloat(document.getElementById("valor2").value);
+                                                let somar = valor1 + valor2 ;
+                                                
+                                                resultado.innerHTML =`<p>${somar}</p>`;
+                                }
+                                function subtracao(){
+                                                var valor1 = parseFloat(document.getElementById("valor1").value);
+                                                var valor2 = parseFloat(document.getElementById("valor2").value);
+                                                let subtrair = valor1 - valor2 ;
+                                                
+                                                resultado.innerHTML =`<p>${subtrair}</p>`;
+                                }
+                                function multiplicacao(){
+                                                var valor1 = parseFloat(document.getElementById("valor1").value);
+                                                var valor2 = parseFloat(document.getElementById("valor2").value);
+                                                let multiplicar = valor1 * valor2 ;
+                                                
+                                                resultado.innerHTML =`<p>${multiplicar}</p>`;
+                                }
+                                function divisao(){
+                                                var valor1 = parseFloat(document.getElementById("valor1").value);
+                                                var valor2 = parseFloat(document.getElementById("valor2").value);
+                                                let dividir = valor1 / valor2 ;
+                                                
+                                                resultado.innerHTML =`<p>${dividir}</p>`;
+                                }
+                </script>
+</body>
+</html>
